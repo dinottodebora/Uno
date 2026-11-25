@@ -20,7 +20,7 @@ class Player {
         int cardCount = 0; // amount of cards a player has on it's hand
 
     public:
-        Player();
+        Player(string playerName);
         Hand playerHand; // creates a set of cards for the player
         string getName();
         int getcardCount();
@@ -29,5 +29,5 @@ class Player {
 
 };
 
-#endif;
+#endif
 

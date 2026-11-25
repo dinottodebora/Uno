@@ -16,11 +16,11 @@ class Card {
         string color; // Red, Blue, Green, Yellow
 
     public:
-        Card();
+        Card(string cardNumber, string cardColor);
         string getNumber();
         string getColor();
         void printCard();
         
-};
+}
 
-#endif;
+#endif

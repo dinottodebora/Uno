@@ -2,7 +2,7 @@
 #define HAND_H
 
 #include <vector>
-#include "Card.h"
+
 
 // A hand is a set of cards that belongs to the player. 
 // It starts with 7 cards and can shrink or strech depending on how many cards the player adds or takes off
@@ -14,14 +14,14 @@
 
 class Hand {
     private:
-        vector<Card> hand;
+        std:: vector<Card> hand;
         int handCardCount = 0; // keeps track of how many cards are left 
 
     public:
-        Hand();
-        void getHand();
-        void addCard(); // adds a card to the hand
-        void discardCard(); // takes a card oof the set of cards
+        Hand(vector<Card> playerHand);
+        // void getHand(); maybe not necessary
+        void addCard(Card card); // adds a card to the hand
+        Card discardCard(int index); // takes a card off the set of cards;index identifies the card taken
         void printCurrentCards(); // prints all cards on a hand
 
 };
