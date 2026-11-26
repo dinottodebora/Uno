@@ -26,4 +26,4 @@ class Hand {
 
 };
 
-#endif;
+#endif

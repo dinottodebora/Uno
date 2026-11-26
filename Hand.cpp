@@ -1,9 +1,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
 #include "Card.h"
 #include "Hand.h"
+using namespace std;
 
 
 Hand:: Hand(std::vector<Card> playerHand) : hand(playerHand) {}
@@ -14,8 +14,15 @@ void Hand:: addCard(Card card){
 
 Card Hand:: discardCard(int index) {
     Card card = hand.at(index);
-    hand.erase(hand.begin() + (index - 1));
+    hand.erase(hand.begin() + index );
     return card;
+}
+
+void Hand:: printCurrentCards(){
+    for(int i = 0; i < hand.size(); i++){
+        hand[i].printCard();
+        cout << "  ";
+    }
 }
 
 

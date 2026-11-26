@@ -20,7 +20,7 @@ class Card {
         string getNumber();
         string getColor();
         void printCard();
-        
-}
+     
+};
 
 #endif
